@@ -1,182 +1,163 @@
-\documentclass[10pt, a4paper]{cv}
+\documentclass[letterpaper,11pt]{article}
 
-\usepackage{geometry}
-\usepackage{fontawesome}
-\usepackage{carlito}
-\usepackage{paracol}
-\usepackage{hyperref}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
 \usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome}
 
-\geometry{left=1.5cm,right=1.5cm,top=1cm,bottom=1cm}
 
-\thispagestyle{empty}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\newcommand{\resumeSingleItem}[1]{\item\small{{#1}\vspace{-2pt}}}
+
+\newcommand{\resumeProj}[4]{
+  \vspace{-3pt}
+  \item\small{
+    \textbf{#1} \href{#2}{\textit{#2}} \textbar \space \textit{#4}\\
+    {#3 \vspace{-2pt}}
+  }
+}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[label={}, leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[label={\textcolor{black}{$\bullet$}}]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{document}
-\noindent
-{\LARGE \textbf{Nicholas Cheong Wei Juan}} \\
-\noindent
-\faPhone\ +61431966982 \hspace{25pt}
-\faEnvelope\ 98nicholascheong@gmail.com  \\
-\faHome\ Parkville, VIC 3052 \\
-\faicon{github} https://github.com/98ncwj \hspace{25pt}
-\faLinkedinSquare \space https://www.linkedin.com/in/nicholas-cheong98
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+	\textbf{{\Large Nicholas Cheong Wei Juan}}\\
+	\faPhone\ +61431966982 \hspace{25pt}\\
+	\faEnvelope\ \href{mailto:98nicholascheong@gmail.com }{98nicholascheong@gmail.com}  & \faicon{github} \href{https://github.com/98ncwj/}{98ncwj}\\
+	\faHome\ Parkville, VIC 3052 & \faLinkedinSquare \space \href{https://www.linkedin.com/in/nicholas-cheong98/}{nicholas-cheong98} \\
+\end{tabular*}
+
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+\resumeSubHeadingListStart
+\item{
+            \textbf{Languages}{: TypeScript, JavaScript, Java, MySQL, Python, C, Haskell, Prolog}\\
+            \textbf{Frameworks}{: NodeJS, Next.js, React, MongoDB, PRISMA, Knex.js, Kafka, Spring Boot, PubSub}\\
+            \textbf{Tools}{: Git, Docker, npm, GCP, AWS, Bitbucket, Jest, Octopus}\\
+      }
+\resumeSubHeadingListEnd
 
 
-\begin{paracol}{2}
-	\begin{flushleft}
 
-		\section*{Work}
-		 {\sl Corporate Alliance FX (CAFX) } [Software Engineer] \\
-		Leveraging CAPAY system, providing global remittance with convenience and efficiency.\\
-		January 2022 - Current \\
-		\vspace{6pt}
-		\quad Year 1
-		\begin{itemize}[ topsep=0pt] \itemsep -2pt
-			\item Developed frontend pages for CAPAY system. Practised React and gained knowledge about React Redux and CoreUI. The system was later upgraded to MaterialUI along with React Hooks.
-			\item Took part in the migration process from old backend JavaScript architecture to new Typescript based architecture. The 2 services I was in charge of were the first to be finished and were used as a reference by other team members.
-			\item Implemented impactful improvements, including the implementation of comprehensive unit tests across all services, ensuring robust code quality and reliability. Introduced the adoption of Prettier, enabling consistent and standardized coding formats across the team, resulting in enhanced collaboration and code maintainability.
-			\item Designed and implemented new dynamic reporting system for CAPAY. Users are given the freedom to customize reports and the system will generate SQL to get the relevant data.
-			\item Conduct regular bug-fixes and system improvements both in backend and frontend by going through JIRA tickets raised by various departments.
-			\item Gained knowledge about financial fx practices and payments system through discussions with colleagues from other departments.
-		\end{itemize}
-		\vspace{6pt}
-		\quad Year 2
-		\begin{itemize}[ topsep=0pt]  \itemsep -2pt
-			\item Project Lead for CAPAY system compliance reporting. Collaborated with company's internal compliance team, AUSTRAC (AU), DIA (NZ) to gather requirements, then designed and implemented a system to automate IFTI and PTR reporting.  This initiative greatly improved operational efficiency and ensured compliance with regulatory standards.
-			\item Service owner and go to person for various CAPAY microservices. Implemented a JAVA based microservice that allowed CAPAY to trade with 3rd party counterparts.
-			\item Wrote comprehensive coding documentation in Confluence, providing clear instructions and guidelines for developers and future maintenance. Also made sure that coding documentation was regularly updated to reflect changes and improvements made during the development lifecycle.
-			\item Proficiently reviewed and provided constructive feedback on pull requests, ensuring code quality and adherence to project standards.
-		\end{itemize}
-		\switchcolumn
-		\vspace{43pt}
-		{\sl LeanData.io } [Fullstack Lead Engineer] \\
-		Delivering lean growth to scaling companies through nimble enterprise software and expertise.\\
-		Sept 2020 - December 2021
-		\begin{itemize} \itemsep -2pt
-			\item Took part in the maintenance and backend development of an Order Management System for a large international sporting brand.
-			\item Currently maintaining and developing a web application that performs matching between investor funds and startups.
-			\item Implemented additional security to various front facing services by utilising GCP reCaptcha to prevent bot spams.
-			\item Implemented and managed Kafka consumer service from scratch to ensure stocks quantity are well updated and reconciled.
-			\item Implemented and maintained a financial tool which extracts information from various sources, aggregates them and sends the data in a fixed format to a data lake so that the data can be used by various consumers to generate financial reports.
-			\item Worked in an AGILE environment and engaged in weekly sprint + analysis meetings with clients to identify needs to deliver working, up to standard code. Responsible for planning weekly sprints.
-			\item Gained knowledge and commercial practice using Google Cloud Platform tools.
-			\item Gained knowledge and commercial practice of using various technologies such as Kafka, Docker, RESTful APIs, PubSub, MySQL, POSTGRESQL, Retool, Bubble, Shopify API.
-		\end{itemize}
 
-		\section*{Internships}
-		 {\sl RHB Investment Bank Bhd. } \\
-		Aug 2017 - Nov 2017
-		\begin{itemize} \itemsep -2pt
-			\item Gained knowledge about online Investments, \quad Banking, security and payment backroom system.
-			\item Learned how to read charts and various trading strategies.
-		\end{itemize}
-		{\sl The Gasket Alley } \\
-		Dec 2017 - Feb 2018
-		\begin{itemize} \itemsep -2pt
-			\item Part of the marketing team at a company that had sole distribution rights for Harley Davidson in Malaysia.
-			\item Gained invaluable hands-on commercial experience in marketing and management decisions making.
-		\end{itemize}
-		\vspace{24pt}
+%-----------EDUCATION-----------------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{University of Melbourne}{Melbourne, VIC}
+{BSc in Computer Science and Software Engineering;  WAM: 75.591}{Feb. 2018 -- Dec. 2020}
+\resumeItemListStart
+\resumeItem{CourseWork}
+{Engineering Systems Design, Design of Algorithms, Database Systems, Elements of Data Processing, Object Oriented Software Development, Machine Learning, Computer Systems, Web Information Technologies, Software Modeling and Design, Logical Methods, Declarative Programming, Models of Computation }
+\resumeItemListEnd
+\resumeSubHeadingListEnd
 
-		\switchcolumn
 
-		\section*{Education}
-		 {\sl University of Melbourne} \\
-		Conferral Date: December 2020
-		\begin{itemize} \itemsep -1pt
-			\item BSc in Computer Science and Software Engineering \\
-			      Weighted Average: 75.591
-		\end{itemize}
-		{\sl Korea University} \\
-		Completed
-		\begin{itemize} \itemsep -1pt
-			\item Korea University International Winter Course \\
-		\end{itemize}
+%-----------EXPERIENCE-----------------
+\section{Experience}
+\resumeSubHeadingListStart
 
-		\section*{Coursework}
-		 {\sl University of Melbourne}
-		\begin{itemize} \itemsep -2pt
-			\item Engineering Systems Design \space 82\%
-			\item Design of Algorithms \space 86\%
-			\item Database Systems \space 82\%
-			\item Elements of Data Processing \space 81\%
-			\item Object Oriented Software Development \space 83\%
-			\item Machine Learning \space 76\%
-			\item Computer Systems \space 76\%
-			\item Web Information Technologies \space 81\%
-			\item Software Modeling and Design \space 75\%
-			\item Logical Methods \space 81\%
-		\end{itemize}
+\resumeSubheading
+{CAFX}{Sydney, NSW}
+{Software Engineer}{Jan 2022 - Present}
+\resumeItemListStart
+\resumeSingleItem{Project Lead for CAPAY system compliance reporting. Collaborated with internal and external entities to gather requirements, then designed and implemented a system to automate IFTI and PTR reporting.}
+\resumeSingleItem{Service owner and go to person for various microservices. Implemented a Spring Boot microservice to trade with 3rd party counterparts. Service was encapsulated in Docker and deployed to AWS cloud formation using Bitbucket pipelines + OCTOPUS deploy.}
+\resumeSingleItem{Took part in the migration process of backend services from JavaScript to Typescript. TypeScript allows for easier error detection and improves code maintainability. Frontend code was also migrated later on.}
+\resumeSingleItem{Implemented the unit test infrastructure for microservices using Jest, ensuring comprehensive code coverage and reliable software quality assurance.}
+\resumeSingleItem{Developed RESTful APIs for the CAPAY System. Utilized Next.js for server-side rendering and routing, Prisma for database interactions, and implemented Controllers and DTOs to ensure clean and structured API design.}
+\resumeSingleItem{Designed and implemented new dynamic reporting module for CAPAY. Module translates json to rawSQL through custom algorithm.}
+\resumeSingleItem{Conduct weekly knowledge sharing to update various stakeholders (non-tech) on feature updates/progress. Directly report to CEO + heads of various departments.}
+\resumeSingleItem{Wrote comprehensive coding documentation in Confluence, providing clear instructions and guidelines for developers and future maintenance.}
+\resumeItemListEnd
 
-		\section*{Skills}
-		 {\sl Languages}
-		\begin{itemize}[label={}, leftmargin=1em, topsep=0pt, after=\vspace{6pt}]
-			\item English, Chinese, Bahasa Melayu, Cantonese, Hokkien
-		\end{itemize}
-		{\sl Experienced}
-		\begin{itemize}[label={}, leftmargin=1em,  topsep=0pt, after=\vspace{6pt}]
-			\item TypeScript, JavaScript, Node.js, React, MUI, PRISMA, MYSQL, Java, C, Python, Git, devops, project management, AGILE
-		\end{itemize}
-		{\sl Familiar}
-		\begin{itemize}[label={}, leftmargin=1em, topsep=0pt]
-			\item Haskell, Prolog, \LaTeX, POSTGRESQL, AWS, GCP, Retool, Bubble, Firebase
-		\end{itemize}
+\resumeSubheading
+{LeanData.io}{Melbourne, VIC}
+{Fullstack Lead Engineer}{Sept 2020 - Dec 2021}
+\resumeItemListStart
+\resumeSingleItem{Utilised JavaScript, NodeJS, MySQL to maintain and develop Order Management System of a large International sporting brand. The service was hosted on GCP.}
+\resumeSingleItem{Implemented additional security to various front facing services by utilising GCP reCaptcha to prevent bot spams.}
+\resumeSingleItem{Implemented and managed Kafka consumer service to ensure stocks quantity are well updated and reconciled}
+\resumeSingleItem{Implemented and maintained a financial tool which extracts and formats data from various sources, then sends it to a data lake so that the data can be used by various consumers (generate reports/restock/update stocklist/...).}
+\resumeSingleItem{Responsible for planning weekly sprint + analysis meetings (AGILE) with clients to identify needs to deliver working, up to standard code.}
+\resumeItemListEnd
 
-		\switchcolumn
+\resumeSubHeadingListEnd
 
-		\section*{Past Projects}
-		 {\sl E-portfolio App \textbar \space Programmer} \\
-		https://eportfolio-5head.web.app
-		\begin{itemize} \itemsep -2pt
-			\item Website for students to share their E-portfolio and work experience. Allowing job recruiters and students to connect and easily share info. [Final Year Project]
-			\item Provides users with various features such as a search feature (Elastic search), a live chat, and document uploading/sharing.
-			\item Utilized Material UI, React hooks for front end development.
-			\item Backend was coded using NodeJS Express and deployed on firebase.
-			\item Utilized Firebase NoSQL DB to store various data such as user info, project info, education background etc.
-		\end{itemize}
-		{\sl Husky App \textbar \space Sole Programmer} \\
-		https://social-bc15d.web.app
-		\begin{itemize} \itemsep -2pt
-			\item Simple Twitter clone created to practice fullstack development
-			\item Users are able to upload and change their profile picture, add post that can be seen by other users, and comment and like another user's post.
-			\item Utilized Material UI, React Redux for front end development.
-			\item Backend was coded using NodeJS Express and deployed on firebase.
-		\end{itemize}
-		{\sl Salted Caramel App \textbar \space Lead Backend programmer } \\
-		https://saltedcaramelapp.herokuapp.com (Obsolete)
-		\begin{itemize} \itemsep -2pt
-			\item Worked with a team to create a simple web food ordering app (customers will be redirected to ordering page just by scanning a qr code).
-			\item Gained valuable practice using AGILE methodology to manage project development.
-			\item Utilized Node.js, MongoDB and various libraries to create a mock food ordering app.
-		\end{itemize}
 
-		\switchcolumn
+%-----------PROJECTS-----------------
+\section{Projects}
+\vspace{1.5pt}
+\resumeSubHeadingListStart
+\resumeProj{E-portfolio App}{https://eportfolio-5head.web.app}
+{Website for students to share their E-portfolio and work experience. Allowing job recruiters and students to connect and easily share info. [Final Year Project]}
+{NodeJS,React, Elasticsearch, Firebase}
+\resumeProj{Husky App}{https://social-bc15d.web.app}
+{Simple Twitter clone created to practice fullstack development}
+{NodeJS, MaterialUI, React}
+\resumeProj{Salted Caramel App}{}
+{Simple web food ordering web app (customers can order just by scanning a qr code).}
+{NodeJS, MongoDB, HTML}
+\resumeSubHeadingListEnd
 
-		\section*{Experience}
-		\begin{itemize} \itemsep -2pt
-			\item Competed in Google HashCode 2020 coding competition as team programmer. Which team managed to achieve 5th in rank in whole of Australia.
-			\item Served as Design Leader for annual UMSU Night Market and Winter in August Ball. Leading to a successful event and raised funds for future MoMU club activities.
-			\item Did voluntary community services: charity fund raising, regularly visited orphanage and old-folks home.
-			\item Served as Group Leader for organizing the 2014 annual carnival. Successfully raised MYR 30,000 for the Chong Hwa Independent High School Development Fund.
-			\item Active in sports like futsal, basketball, football and volleyball.
-			\item 4 years of experience with the guitar.
-			\item Acquired Black-belt (2nd POM) in Taekwondo.
-		\end{itemize}
 
-		\switchcolumn
-
-		\section*{Referee}
-		 {\sl Antoine Vaxelaire} \\
-		IT Business Analyst, \\
-		LeanData.Io  \\
-		+33 6 33 77 32 28 \\
-		\bigskip
-		{\sl Bruce Song} \\
-		CEO, \\
-		Corporate Alliance Payments  \\
-		+61421167858 \\
-	\end{flushleft}
-\end{paracol}
-
+%-------------------------------------------
 \end{document}
-
